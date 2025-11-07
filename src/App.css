@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 0;
+  transition: all 0.3s, color 0.3s;
+  text-align: center;
+  
+}
+
+h1 {
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.weatherInfo{
+  margin: 30px;
+  background-color: #f5f5f573;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-table;
+}
+
+h3{
+  margin: 10px 0;
+}
+
+h2{
+  margin: 20px 0;
+}
+
+input{
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 200px;
+  font-size: 16px;
+  background-color: #f8fafc71;
+  color: inherit;
+}
+
+
+
+
+/* примеры стилей для разных погод */
+.app.weather-clear {
+  background-image: url('https://i.pinimg.com/originals/81/82/88/8182883662dc95819892dded25b31866.jpg');
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center; /* центр по горизонтали и вертикали */
+  background-size: cover;      /* покрыть весь контейнер, сохраняя пропорции */
+}
+.app.weather-clouds {
+  background-image:  url('data:image/jpeg;base64,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') ;
+  color: #475569;
+  background-repeat: no-repeat;
+  background-position: center; /* центр по горизонтали и вертикали */
+  background-size: cover;      /* покрыть весь контейнер, сохраняя пропорции */
+}
+.app.weather-rain {
+  background: url('https://i.pinimg.com/originals/dd/cc/e2/ddcce2d8acc922ef7ca40e3fe65e9b5e.jpg');
+  color: #0369a1;
+  background-repeat: no-repeat;
+  background-position: center; /* центр по горизонтали и вертикали */
+  background-size: cover;      /* покрыть весь контейнер, сохраняя пропорции */
+}
+.app.weather-snow {
+  background: url('https://cdn.pixabay.com/photo/2014/12/04/14/34/snowy-tree-556706_960_720.jpg');
+  color: #0f172a;
+  background-repeat: no-repeat;
+  background-position: center; /* центр по горизонтали и вертикали */
+  background-size: cover;      /* покрыть весь контейнер, сохраняя пропорции */
+}
+.app.weather-thunder {
+  background: url('https://i.ytimg.com/vi/ML5n2DuPE6I/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AHUBoAC4AOKAgwIABABGHIgSihHMA8=&amp;rs=AOn4CLAEm68MB8XbKXNZuc3SjZinkGbh8Q');
+  color: #f8fafc;
+  background-repeat: no-repeat;
+  background-position: center; /* центр по горизонтали и вертикали */
+  background-size: cover;      /* покрыть весь контейнер, сохраняя пропорции */
+}
+.app.weather-mist {
+  background: url('https://cdn.pixabay.com/photo/2015/02/07/17/50/trees-627669_1280.jpg');
+  color: #6b7280;
+  background-repeat: no-repeat;
+  background-position: center; /* центр по горизонтали и вертикали */
+  background-size: cover;      /* покрыть весь контейнер, сохраняя пропорции */
+}
+.app.weather-default {
+  background: #ffffff;
+  color: #111827;
+  background-repeat: no-repeat;
+  background-position: center; /* центр по горизонтали и вертикали */
+  background-size: cover;      /* покрыть весь контейнер, сохраняя пропорции */
+}
+
+
+/* примеры стилей для разных городов */
+
+
+.app.Moscow {
+  background-image: url('https://avatars.mds.yandex.net/i?id=ee2e4ff30fa2c39ca320b457697fd544_l-5869551-images-thumbs&n=13');
+  background-repeat: no-repeat;
+  background-position: center; /* центр по горизонтали и вертикали */
+  background-size: cover;      /* покрыть весь контейнер, сохраняя пропорции */
+  color: #ffffff;
+}
+
+
+
+.app.Tokyo {
+  background-image: url('https://i.pinimg.com/originals/79/57/b4/7957b4e964a06e197f6827022130e348.jpg');
+  background-repeat: no-repeat;
+  background-position: center; /* центр по горизонтали и вертикали */
+  background-size: cover;      /* покрыть весь контейнер, сохраняя пропорции */
+  color: #ffffff;
+}
+
+.app.New-York{
+  background-image: url('./assets/85734-krajsler_bilding-gorod-nizhnij_manhetten-metropoliya-stolica-2560x1440.jpg');
+  background-repeat: no-repeat;
+  background-position: center; /* центр по горизонтали и вертикали */
+  background-size: cover;      /* покрыть весь контейнер, сохраняя пропорции */
+  color: #ffffff;
+}
+
+.app.London{
+  background-image: url('https://wallpapers.com/images/hd/4k-laptop-london-s-tourist-attractions-azwcjmgiu1igd65s.jpg');
+  background-repeat: no-repeat;
+  background-position: center; /* центр по горизонтали и вертикали */
+  background-size: cover;      /* покрыть весь контейнер, сохраняя пропорции */
+  color: #ffffff;
+}
+
+.app.Paris{
+  background-image: url('https://wallpapers.com/images/hd/paris-desktop-wallpaper-lho2xc6gyy4i1jsx.jpg');
+  background-repeat: no-repeat;
+  background-position: center; /* центр по горизонтали и вертикали */
+  background-size: cover;      /* покрыть весь контейнер, сохраняя пропорции */
+  color: #ffffff;
+}
+
+.app.Sydney{
+  background-image: url('https://i.pinimg.com/originals/06/ca/16/06ca1695e506365ef58a38372b65bc46.jpg');
+  background-repeat: no-repeat;
+  background-position: center; /* центр по горизонтали и вертикали */
+  background-size: cover;      /* покрыть весь контейнер, сохраняя пропорции */
+  color: #ffffff;
+}
+
+.app.Shanghai{
+  background-image: url('https://i.pinimg.com/originals/9e/54/de/9e54de334277601d1d4629fc486910d9.jpg');
+  background-repeat: no-repeat;
+  background-position: center; /* центр по горизонтали и вертикали */
+  background-size: cover;      /* покрыть весь контейнер, сохраняя пропорции */
+  color: #ffffff;
+}
+
+
+
+@media (max-width: 350px) {
+  .app {
+    width: 100%;
+  }
+  
+  .weatherInfo {
+    width: 280px;
+    margin: 12px auto;
+    padding: 10px;
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .app {
+    padding: 12px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+    margin-top: 20px;
+  }
+  input {
+    width: 60%;
+    max-width: 260px;
+  }
+  .weatherInfo {
+    width: 320px;
+    margin: 20px auto;
+    padding: 16px;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  #root,
+  .app {
+    min-height: 100vh;
+    height: auto;
+    
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    margin-top: 12px;
+  }
+
+  input {
+    width: calc(100% - 40px);
+    max-width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .weatherInfo {
+    width: calc(100% - 32px);
+    margin: 12px auto;
+    padding: 12px;
+    display: block;
+    background-color: rgba(245,245,245,0.55);
+  }
+
+  /* для фоновых картинок на малых экранах — центрируем сверху и не обрезаем важное */
+  .app {
+    background-position: center top;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .weatherInfo {
+    width: 380px;
+    padding: 22px;
+  }
+}
