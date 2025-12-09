@@ -74,6 +74,7 @@ function App() {
         <h2>City Name: {search} </h2>
         <h3>Temperature: {city ? (city.temp -273.15).toFixed(2) + '°C' : 'N/A'} </h3>
         <h3>Weather: {weather ? weather.description : 'N/A'} </h3>
+        <p>write the city name in English right</p>
       </div>
       </div>
     </>
