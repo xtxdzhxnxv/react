@@ -68,7 +68,9 @@ input{
   color: inherit;
 }
 
-
+p{
+  color: grey;
+}
 
 
 /* примеры стилей для разных погод */
