@@ -1,16 +1,25 @@
-# React + Vite
+# React Weather App — Интерактивный сервис погоды с динамическим интерфейсом
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-приложение (SPA) на базе библиотеки React для отслеживания погоды в реальном времени с интеграцией стороннего API и кастомной логикой визуализации.
 
-Currently, two official plugins are available:
+## 🔗 Живая ссылка на проект
+* **Посмотреть проект вживую:** [Вставь сюда ссылку на твой Netlify]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🛠 Технологический стек
+* **Фреймворк:** React.js (Компонентный подход, Управление состоянием / Hooks).
+* **Работа с данными:** Асинхронные запросы (Fetch / Axios), Интеграция с OpenWeatherMap API.
+* **Стилизация:** CSS3 (Динамические стили в зависимости от состояния приложения).
+* **Деплой:** Netlify, GitHub.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Ключевые фичи и реализованная логика
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Интеграция с OpenWeather API:** Приложение отправляет асинхронные запросы к погодному серверу, парсит JSON-ответ и выводит актуальные данные (температура, влажность, описание погоды).
+2. **Динамический бэкграунд по погоде:** При поиске любого стандартного города интерфейс анализирует погодные условия и автоматически меняет фон в зависимости от состояния атмосферы (солнце, дождь, облачность, снег).
+3. **Умный гибридный бэкграунд для мегаполисов:** Реализован эксклюзивный триггер для популярных мировых столиц и мегаполисов (New York, Sydney, Tokyo, Shanghai и др.). При их поиске приложение приоритизирует визуальную локацию и переключает фон на атмосферную панораму конкретного города.
+4. **Управление состоянием (State Management):** Логика приложения построена на React Hooks (`useState`, `useEffect`), что обеспечивает мгновенный рендеринг изменений интерфейса без перезагрузки страницы.
+
+---
